@@ -1,0 +1,29 @@
+<html>
+<meta charset="utf-8">
+<body>
+<!-- Threads que contem de 1 a 100.
+Qtd solicitado ao usuário, cada Thread responsável por uma parte-->
+<!-- w.terminate(); w = undefined; -->
+<input type="number" id="qtd">
+<button onclick="contar()">Contar</button>
+
+<script>
+	var a = 0, b = 0;
+	function contar(){
+		var qtd = document.getElementById("qtd").value;
+		for(let i = b; i < parseInt(qtd) + b; i++){
+			var newDiv = document.createElement("div");
+			newDiv.id="T"+i;
+			document.body.appendChild(newDiv);
+			//starta
+			new Worker("script.js").onmessage = function(event) {
+				document.getElementById("T"+i).innerHTML = event.data;
+			};
+			a++;
+		}
+		b = b + a;
+		a = 0;
+	}
+</script>
+</body>
+</html>

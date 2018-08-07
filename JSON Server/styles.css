@@ -1,0 +1,31 @@
+/*Removes the arrows inside the input for chrome*/
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+/*Removes the arrows inside the input for firefox*/
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+input[id='quantity'] {
+	width: 30px;
+}
+input[id='produto'] {
+	width: 200px;
+}
+form {
+	width: 400px;
+	/*margin: auto;*/
+	/*text-align: center;*/
+}
+#content {
+	width: 450px;
+	height: 500px;
+	margin-left: 30px;
+	/*margin: auto;*/
+	/*background-color: lightblue;*/
+}
+h1 {
+	font-weight: 500;
+	font-family: Segoe UI Light;
+}

@@ -1,0 +1,18 @@
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="scripts.js"></script>
+<body>
+<div id="content">
+	<h1>Cadastro de Produtos</h1>
+	<form onsubmit="createNewProduct(); return false">
+		<input type="text" id="product" placeholder="Produto" required>
+		<input type="number" id="quantity" placeholder="Qtd" min="1" max="99">
+		<input type="submit" id="submit" value="Novo produto">
+	</form>
+<div id="result"></div>
+</div>
+<table>
+</table>
+</body>
+</html>

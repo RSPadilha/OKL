@@ -1,0 +1,43 @@
+#content {
+	width: 500px;
+}
+#infos {
+	width: 350px;
+}
+.user {
+	margin-bottom: 20px;
+}
+h2, h4 {
+	margin: 5px;
+}
+h4 {
+	font-style: italic;
+	font-family: Arial;
+}
+input[id^= "weight"], input[id^="height"] {
+	width: 100px;
+}
+input[id^="name"] {
+	width: 170px;
+}
+input[id^="date"] {
+	width: 130px;
+}
+/*Align inputs*/
+input, select {
+	height: 22px;
+	margin-top: 2px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+/*Removes the arrows inside the input for chrome*/
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+/*Removes the arrows inside the input for firefox*/
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+.btnAddDiv {
+	float: right;
+}

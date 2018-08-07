@@ -1,1 +1,0 @@
-Calculadora IMC feita primeiro em JS e convertido pra PHP

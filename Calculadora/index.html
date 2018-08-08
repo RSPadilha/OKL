@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript ex 5</title>
+	<style>
+		.content {
+			background: #eee;
+			border-radius: 10px;
+			text-align: center;
+			margin: auto;
+			width: 400px;
+			padding: 20px;
+		}
+		ul {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			list-style: none;
+			display: inline-block;
+			width: 100px;
+			margin: 0px 25px;
+		}
+		input {
+			margin: 5px 25px;
+			width: 100px;
+		}
+		#result {
+			width: 150px;
+		}
+	</style>
+	<script>
+		var valor1, valor2, result;
+		function isEmpty() {
+			result = document.getElementById("result");
+			valor1 = parseInt(document.getElementById("valor1").value);
+			valor2 = parseInt(document.getElementById("valor2").value)
+			if (isNaN(valor1) || isNaN(valor2)) {
+				result.value = "#Error";//lento
+				window.alert("Campo(s) vazio(s) ");
+				return true;
+			}
+		}
+		function soma() {
+			if(!isEmpty())
+				result.value = valor1 + valor2;
+		}
+		function subtracao() {
+			if(!isEmpty())
+				result.value = valor1 - valor2;
+		}
+		function multiplicacao() {
+			if(!isEmpty())
+				result.value = valor1 * valor2;
+		}
+		function divisao() {
+			if(!isEmpty())
+				if(valor2 == 0)
+					result.value = "Impossível dividir por 0";
+				else
+					result.value = valor1 / valor2;
+		}
+		function modulo() {
+			if(!isEmpty())
+				if(valor2 == 0)
+					result.value = "Impossível dividir por 0";
+				else
+					result.value = valor1 % valor2;
+		}
+	</script>
+</head>
+<!-- Faça uma página de internet onde é possível informar
+dois valores e realizar as operações de soma,
+subtração, multiplicação, divisão e módulo (resto da
+divisão). Faça consistências para evitar valores em
+branco e para evitar, que na divisão e no módulo, o
+segundo valor seja 0.-->
+<body>
+	<div class="content">
+		<ul>
+			<li>Valor 1</li>
+			<li>Valor 2</li>
+		</ul>
+		<input id="valor1" type="number">
+		<input id="valor2" type="number"> <br>
+		<button onclick="soma()">+</button>
+		<button onclick="subtracao()">-</button>
+		<button onclick="multiplicacao()">*</button>
+		<button onclick="divisao()">/</button>
+		<button onclick="modulo()">%</button> <br>
+		<input id="result" readonly>
+	</div>
+</body>
+</html>
+
